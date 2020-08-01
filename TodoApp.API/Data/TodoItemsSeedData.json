@@ -1,0 +1,146 @@
+[
+    {
+        "task": "Doing Assignment 1",
+        "isComplete": true,
+        "dueDate": "2020-07-28",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 2",
+        "isComplete": true,
+        "dueDate": "2020-07-29",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 3",
+        "isComplete": true,
+        "dueDate": "2020-07-30",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 4",
+        "isComplete": false,
+        "dueDate": "2020-07-31",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 5",
+        "isComplete": false,
+        "dueDate": "2020-08-01",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 6",
+        "isComplete": true,
+        "dueDate": "2020-08-02",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 7",
+        "isComplete": true,
+        "dueDate": "2020-08-03",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 8",
+        "isComplete": true,
+        "dueDate": "2020-08-04",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 9",
+        "isComplete": true,
+        "dueDate": "2020-08-05",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 10",
+        "isComplete": false,
+        "dueDate": "2020-08-15",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 11",
+        "isComplete": false,
+        "dueDate": "2020-08-16",
+        "Username": "Amy"
+    },
+    {
+        "task": "Doing Assignment 12",
+        "isComplete": false,
+        "dueDate": "2020-08-17",
+        "Username": "Amy"
+    },
+    {
+        "task": "Building website 1",
+        "isComplete": true,
+        "dueDate": "2020-07-20",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 2",
+        "isComplete": true,
+        "dueDate": "2020-07-21",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 3",
+        "isComplete": true,
+        "dueDate": "2020-07-22",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 4",
+        "isComplete": true,
+        "dueDate": "2020-07-23",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 5",
+        "isComplete": false,
+        "dueDate": "2020-07-24",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 6",
+        "isComplete": false,
+        "dueDate": "2020-07-25",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 7",
+        "isComplete": false,
+        "dueDate": "2020-08-14",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 8",
+        "isComplete": false,
+        "dueDate": "2020-08-17",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 9",
+        "isComplete": false,
+        "dueDate": "2020-08-20",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 10",
+        "isComplete": false,
+        "dueDate": "2020-08-25",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 11",
+        "isComplete": false,
+        "dueDate": "2020-09-03",
+        "Username": "Peter"
+    },
+    {
+        "task": "Building website 12",
+        "isComplete": false,
+        "dueDate": "2020-09-06",
+        "Username": "Peter"
+    }
+]

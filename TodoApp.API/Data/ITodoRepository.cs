@@ -10,7 +10,7 @@ namespace TodoApp.API.Data
         void Delete<T> (T entity) where T : class;
         Task<bool> SaveAll ();
 
-        Task<IEnumerable<TodoItem>> GetItems (ItemParams userParams);
+        Task<PagedList<TodoItem>> GetItems (ItemParams userParams);
         Task<TodoItem> GetItem (string UserName, int id);
     }
 }

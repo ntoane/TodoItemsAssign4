@@ -30,15 +30,17 @@ namespace TodoApp.API.Data
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<IEnumerable<TodoItem>> GetItems(ItemParams itemParams)
+        public async Task<PagedList<TodoItem>> GetItems(ItemParams itemParams)
         {
             // If overdue is true, i.e retrive only items overdue
             if(itemParams.Overdue) {
                 // item is ovedue if and only if due date < now and is complete = false
-                return await _context.TodoItems.Where(i => i.UserName == itemParams.UserName && (i.DueDate < DateTime.Now && i.IsComplete == false)).ToListAsync();
+                var todoItems1 = _context.TodoItems.Where(i => i.UserName == itemParams.UserName && (i.DueDate < DateTime.Now && i.IsComplete == false));
+                return await PagedList<TodoItem>.CreateAsync(todoItems1, itemParams.PageNumber, itemParams.PageSize);
             }
             // get all items as per user
-            return await _context.TodoItems.Where(i => i.UserName == itemParams.UserName).ToListAsync();
+            var todoItems2 =  _context.TodoItems.Where(i => i.UserName == itemParams.UserName);
+            return await PagedList<TodoItem>.CreateAsync(todoItems2, itemParams.PageNumber, itemParams.PageSize);
         }
 
         public async Task<TodoItem> GetItem(string UserName, int id)

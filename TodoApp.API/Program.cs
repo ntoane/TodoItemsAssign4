@@ -23,6 +23,7 @@ namespace TodoApp.API
                     var userManager = services.GetRequiredService<UserManager<IdentityUser>>();
                     context.Database.Migrate();
                     Seed.SeedUsers(userManager);
+                    Seed.SeedTodoItems(context);
                 }
                 catch (Exception ex)
                 {

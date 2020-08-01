@@ -37,6 +37,8 @@ namespace TodoApp.API.Controllers
             var items = await _repo.GetItems(itemParams);
             var itemsToReturn = _mapper.Map<IEnumerable<ItemForListDto>>(items);
 
+            Response.AddPagination(items.CurrentPage, items.PageSize, items.TotalCount, items.TotalPages);
+
             return Ok(itemsToReturn);
         }
 
@@ -53,6 +55,8 @@ namespace TodoApp.API.Controllers
 
             var items = await _repo.GetItems(itemParams);
             var itemsToReturn = _mapper.Map<IEnumerable<ItemForListDto>>(items);
+
+            Response.AddPagination(items.CurrentPage, items.PageSize, items.TotalCount, items.TotalPages);
 
             return Ok(itemsToReturn);
         }
