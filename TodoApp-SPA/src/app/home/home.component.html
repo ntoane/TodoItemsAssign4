@@ -1,3 +1,20 @@
-<p>
-  home works!
-</p>
+<div class="container mt-5">
+  <div  class="text-center">
+    <h2>Welcome to TodoItems App official website!</h2>
+    <p class="lead">
+      With TodoItems App, you will be able to 
+    </p>
+      <ul class="list-unstyled lead">
+        <li><fa-icon [icon]="handIcon"></fa-icon> Save any to-do item you like</li>
+        <li><fa-icon [icon]="handIcon"></fa-icon> Modify the saved to-do items</li>
+        <li><fa-icon [icon]="handIcon"></fa-icon> Change the status of the to-do items</li>
+        <li><fa-icon [icon]="handIcon"></fa-icon> Delete any to-do item you no longer want</li>
+      </ul>
+
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg mr-2" [routerLink]="['/register']" >Register</button>
+      <button class="btn btn-secondary btn-lg" [routerLink]="['/contact']" >Contact Us</button>
+    </div>
+  </div>
+
+</div>
