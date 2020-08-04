@@ -1,0 +1,38 @@
+<div class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+  <a class="navbar-brand font-weight-bold" href="#"><fa-icon [icon]="listIcon"></fa-icon> TodoItems App</a>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">My TodoItems</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">New TodoItem</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Overdue TodoItems</a>
+      </li>
+    </ul>
+
+    <div class="dropdown" dropdown>
+      <span class="mr-1">
+        <img src="../../../../assets/user.png" alt="User Image">
+      </span>
+      <a class="dropdown-toggle text-light" dropdownToggle>
+        Welcome User
+      </a>
+
+      <ul class="dropdown-menu mt-3" *dropdownMenu>
+        <li>
+          <a class="dropdown-item" href="#"><fa-icon [icon]="signOutIcon"></fa-icon>&nbsp;Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Username">
+      <input class="form-control mr-sm-2" type="password" placeholder="Password">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>
+    </form>
+  </div>
+</div>
