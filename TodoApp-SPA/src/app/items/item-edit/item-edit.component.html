@@ -1,3 +1,46 @@
-<p>
-  item-edit works!
-</p>
+<div class="modal-header">
+  <h4 class="modal-title pull-left"><strong>Edit</strong> {{item.task}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  <form [formGroup]="editItemForm" (ngSubmit)="editItem(item)">
+    <div class="modal-body">
+    <div class="form-group row">
+      <label for="task" class="col-sm-3 col-form-label"><strong>Task:</strong></label>
+      <div class="col-sm-9">
+        <input type="text" 
+        [ngClass]="{'is-invalid': editItemForm.get('task').errors && editItemForm.get('task').touched}"
+        class="form-control" 
+        formControlName="task">
+        <div class="invalid-feedback">Task description is required</div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="status" class="col-sm-3 col-form-label"><strong>Status:</strong></label>
+      <div class="col-sm-9 mt-2 pl-0">
+        <input class="col-sm-2 col-form-label" type="radio" value="false" formControlName="isComplete">Incomptete
+        <input class="col-sm-2 col-form-label" type="radio" value="true" formControlName="isComplete">Complete
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="duedate" class="col-sm-3 col-form-label"><strong>Due Date:</strong></label>
+      <div class="col-sm-9">
+        <input type="text" 
+        [ngClass]="{'is-invalid': editItemForm.get('dueDate').errors && editItemForm.get('dueDate').touched}"
+        class="form-control" bsDatepicker [bsConfig]="bsConfig"
+        formControlName="dueDate">
+        <div class="invalid-feedback" 
+          *ngIf="editItemForm.get('dueDate').hasError('required') && editItemForm.get('dueDate').touched">
+          Due Date is required
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Cancel</button>
+  </div>
+  </form>

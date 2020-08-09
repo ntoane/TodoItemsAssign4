@@ -24,6 +24,7 @@ export class NavComponent implements OnInit {
       this.alertify.success('Logged in successfully');
     }, error => {
       this.alertify.error(error);
+      console.log(error);
     }, () => {
       this.router.navigate(['/itemlists']);
     });
@@ -36,8 +37,6 @@ export class NavComponent implements OnInit {
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    // this.authService.decodedToken = null;
-    // this.authService.currentUser = null;
     this.alertify.message('Logged out successfully');
     this.router.navigate(['/home']);
   }

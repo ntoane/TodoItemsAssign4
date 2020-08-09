@@ -42,9 +42,11 @@ namespace TodoApp.API.Controllers
 
             var result = await _userManager.CreateAsync(userToCreate, userForRegisterDto.Password);
 
+            var userToReturn = _mapper.Map<UserForReturnDto>(userToCreate);
+
             if (result.Succeeded)
             {
-                return Ok("Successfully Registered as " + userForRegisterDto.UserName);
+                return CreatedAtRoute(_userManager.FindByNameAsync(userToCreate.UserName),userToReturn);
             }
 
             return BadRequest(result.Errors);

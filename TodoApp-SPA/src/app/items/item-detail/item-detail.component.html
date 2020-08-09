@@ -1,3 +1,37 @@
-<p>
-  item-detail works!
-</p>
+<div class="modal-header">
+  <h4 class="modal-title pull-left">To-do item details</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row mb-2">
+    <div class="col-sm-1 fa-lg">
+      <fa-icon [icon]="nameIcon"></fa-icon>
+    </div>
+    <div class="col-sm-11">
+      {{item.task}}
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-1 fa-lg">
+      <fa-icon [icon]="statusIcon"></fa-icon>
+    </div>
+    <div class="col-sm-11">
+      {{item.isComplete === true? 'Complete' : 'Incomplete'}}
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-1 fa-lg">
+      <fa-icon [icon]="duedateIcon"></fa-icon>
+    </div>
+    <div class="col-sm-11">
+      {{item.dueDate | date:'medium'}}
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Close</button>
+</div>

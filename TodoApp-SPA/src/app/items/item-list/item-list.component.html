@@ -1,3 +1,51 @@
-<p>
-  item-list works!
-</p>
+<div class="container">
+  <div class="card shadow mt-5">
+  <div class="card-body">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div>
+        <h2 class="text-center text-primary bg-light">My to-do items list</h2>
+      </div>
+      <hr class="mb-5">
+  
+      <table class="table lead">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">To-do Item</th>
+            <th scope="col">Status</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td> {{item.task}} </td>
+            <td> {{item.isComplete === true? 'Complete' : 'Incomplete'}} </td>
+            <td> {{item.dueDate | date:'medium'}} </td>
+            <td class="fa-lg">
+              <fa-icon class="hover-info" tooltip="Click here to view this to-to item" [icon]="detailIcon" 
+                (click)="detailItemModal(item)"></fa-icon>
+              <fa-icon class="hover-edit" tooltip="Click here to edit this to-do item" [icon]="editIcon"
+                (click)="editItemModal(item)"></fa-icon>
+              <fa-icon class="hover-delete" tooltip="Click here to delete this to-do item" [icon]="deleteIcon" 
+                (click)="deleteItem(item.id)"></fa-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <div class="d-flex justify-content-center">
+        <pagination [boundaryLinks]="true" 
+          [totalItems]="pagination.totalItems"
+          [itemsPerPage]="pagination.itemsPerPage" 
+          [(ngModel)]="pagination.currentPage"
+          (pageChanged)="pageChanged($event)"
+          previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;"
+          lastText="&raquo;">
+        </pagination>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>

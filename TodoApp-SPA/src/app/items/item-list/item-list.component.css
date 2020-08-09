@@ -1,0 +1,17 @@
+fa-icon {
+    padding-right: 16px!important;
+    cursor: pointer;
+    color: #0275d8;
+}
+
+.ng-fa-icon.hover-info:hover {
+    color: #5cb85c;
+}
+
+.ng-fa-icon.hover-edit:hover {
+    color: #f0ad4e;
+}
+
+.ng-fa-icon.hover-delete:hover {
+    color: #d9534f;
+}

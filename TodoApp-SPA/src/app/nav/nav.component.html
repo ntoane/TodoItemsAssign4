@@ -1,16 +1,16 @@
 <div class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-  <a class="navbar-brand font-weight-bold" [routerLink]="['/home']" ><fa-icon [icon]="listIcon"></fa-icon> TodoItems App</a>
+  <a class="navbar-brand font-weight-bold" [routerLink]="['/home']" ><fa-icon style="color: white;" [icon]="listIcon"></fa-icon> TodoItems App</a>
 
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/itemlists']" >My TodoItems</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/newitem']" >New TodoItem</a>
+        <a class="nav-link" [routerLink]="['/overdueitems']" >Overdue TodoItems</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/overdueitems']" >Overdue TodoItems</a>
+        <a class="nav-link" [routerLink]="['/newitem']" >New TodoItem</a>
       </li>
     </ul>
 
@@ -19,10 +19,10 @@
         <img src="../../../../assets/user.png" alt="User Image">
       </span>
       <a class="dropdown-toggle text-light" dropdownToggle>
-        Welcome User
+        Welcome {{ authService.decodedToken?.nameid | titlecase }}
       </a>
 
-      <ul class="dropdown-menu mt-3" *dropdownMenu>
+      <ul class="dropdown-menu mt-3 bg-light" *dropdownMenu>
         <li>
           <a (click)="logout()" class="dropdown-item" href="#"><fa-icon [icon]="signOutIcon"></fa-icon>&nbsp;Logout</a>
         </li>

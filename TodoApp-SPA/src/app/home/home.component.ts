@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faHandPointRight} from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,13 @@ import { faHandPointRight} from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent implements OnInit {
   handIcon = faHandPointRight;
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  loggedIn() {
+    return this.authService.loggedIn();
   }
 
 }
